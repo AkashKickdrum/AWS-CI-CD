@@ -18,7 +18,7 @@ public class GeoCodingController {
     public GeoCodingController(GeoCodingService geoCodingService) {
         this.geoCodingService = geoCodingService;
     }
-    @GetMapping("/geocoding")
+    @GetMapping("/geo")
     public ResponseEntity<String> geocode(@RequestParam String address) {
         String result = geoCodingService.geocode(address);
         return ResponseEntity.ok(result);
